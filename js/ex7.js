@@ -19,18 +19,7 @@ const displayResult = (message, isError) => {
 const processInput = () => {
   // Check if inputs are valid integers (not decimals, not letters)
   if (isNaN(input1) || isNaN(input2) || input1.trim() === "" || input2.trim() === "") {
-    displayResult(`Error: "${input1}" and "${input2}" are not valid integers.`, true);
-    return;
-  }
-
-  // Check for decimals
-  if (!Number.isInteger(Number(input1))) {
-    displayResult(`Error: "${input1}" is not an integer (decimals not allowed).`, true);
-    return;
-  }
-
-  if (!Number.isInteger(Number(input2))) {
-    displayResult(`Error: "${input2}" is not an integer (decimals not allowed).`, true);
+    displayResult(`Error! You must enter integers. You entered "${input1}" and "${input2}". Try again.`, true);
     return;
   }
 
